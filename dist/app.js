@@ -25,6 +25,7 @@ class App {
         this.server.use(Sentry.Handlers.requestHandler());
         this.server.use(
             _cors2.default.call(void 0, {
+                origin: 'https://tiruralbrasil.netlify.app',
                 exposedHeaders: ['X-Total-Count'],
             })
         );
