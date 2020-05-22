@@ -5,6 +5,7 @@ import SessionController from './app/controllers/SessionController';
 import LinhaController from './app/controllers/LinhaController';
 import LinhasVivoController from './app/controllers/LinhasVivoController';
 import LinhasOiController from './app/controllers/LinhasOiController';
+import LinhasAtivas from './app/controllers/LinhasAtivas';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -23,5 +24,6 @@ routes.delete('/linhas/:id', LinhaController.delete);
 
 routes.get('/linhas/vivo', LinhasVivoController.index);
 routes.get('/linhas/oi', LinhasOiController.index);
+routes.get('/linhas/linhas-ativas', LinhasAtivas.index);
 
 export default routes;
