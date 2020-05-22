@@ -4,7 +4,7 @@ class LinhasAtivas {
     async index(req, res) {
         const linhasAtivas = await Linha.count({ where: { status: 'Ativa' } });
 
-        return res.json(linhasAtivas);
+        return res.json({ linhasAtivas });
     }
 }
 
